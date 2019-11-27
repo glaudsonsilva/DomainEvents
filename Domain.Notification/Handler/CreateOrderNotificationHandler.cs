@@ -8,7 +8,7 @@ namespace Domain.Notification
     {
         public void Handle(CreatedOrderDomainEvent domainEvent)
         {
-            Debug.WriteLine("Notification...");
+            Debug.WriteLine("Notification: " + domainEvent);
         }
     }
 }

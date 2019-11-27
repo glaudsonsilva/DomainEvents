@@ -1,4 +1,5 @@
 
+using System.Diagnostics;
 using CrossCutting;
 using Domain.Order.Commands;
 using Domain.Order.DomainEvents;
@@ -7,15 +8,10 @@ namespace Domain.Order.Handlers
 {
     public class CreateOrderCommandHandler : CommandHandler<CreateOrderCommand>
     {
-        private CreateOrderCommandHandler()
+        public CreateOrderCommandHandler()
         {
         }
-
-        public static CommandHandler<CreateOrderCommand> instanciate()
-        {
-            return new DomainEventsNotificationDecorator<CreateOrderCommand>(new CreateOrderCommandHandler());
-        }
-
+         
         public override void Handle(CreateOrderCommand command)
         {
 

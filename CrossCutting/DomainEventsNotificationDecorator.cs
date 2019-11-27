@@ -13,6 +13,8 @@
         public override void Handle(T command)
         {
             this.commandHandler.Handle(command);
+
+            this.commandHandler.RaiseEvents();
         }
     }
 }

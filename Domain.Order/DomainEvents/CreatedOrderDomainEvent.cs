@@ -10,5 +10,10 @@ namespace Domain.Order.DomainEvents
         {
             this.eventId = eventId;
         }
+
+        public override string ToString()
+        {
+            return $"Created order for the {this.eventId}";
+        }
     }
 }

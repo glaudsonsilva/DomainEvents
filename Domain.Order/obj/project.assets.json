@@ -25,6 +25,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "CrossCutting/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CrossCutting.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CrossCutting.dll": {}
+        }
       }
     }
   },
@@ -170,10 +180,16 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "CrossCutting/1.0.0": {
+      "type": "project",
+      "path": "../CrossCutting/CrossCutting.csproj",
+      "msbuildProject": "../CrossCutting/CrossCutting.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "CrossCutting >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -209,7 +225,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\glaudsonsilva\\projetos\\DomainEvents\\CrossCutting\\CrossCutting.csproj": {
+              "projectPath": "C:\\Users\\glaudsonsilva\\projetos\\DomainEvents\\CrossCutting\\CrossCutting.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

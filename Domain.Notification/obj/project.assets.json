@@ -25,6 +25,29 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "CrossCutting/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CrossCutting.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CrossCutting.dll": {}
+        }
+      },
+      "Domain.Order/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CrossCutting": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Domain.Order.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.Order.dll": {}
+        }
       }
     }
   },
@@ -170,10 +193,22 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "CrossCutting/1.0.0": {
+      "type": "project",
+      "path": "../CrossCutting/CrossCutting.csproj",
+      "msbuildProject": "../CrossCutting/CrossCutting.csproj"
+    },
+    "Domain.Order/1.0.0": {
+      "type": "project",
+      "path": "../Domain.Order/Domain.Order.csproj",
+      "msbuildProject": "../Domain.Order/Domain.Order.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "CrossCutting >= 1.0.0",
+      "Domain.Order >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -209,7 +244,14 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\glaudsonsilva\\projetos\\DomainEvents\\CrossCutting\\CrossCutting.csproj": {
+              "projectPath": "C:\\Users\\glaudsonsilva\\projetos\\DomainEvents\\CrossCutting\\CrossCutting.csproj"
+            },
+            "C:\\Users\\glaudsonsilva\\projetos\\DomainEvents\\Domain.Order\\Domain.Order.csproj": {
+              "projectPath": "C:\\Users\\glaudsonsilva\\projetos\\DomainEvents\\Domain.Order\\Domain.Order.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
