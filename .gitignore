@@ -133,3 +133,4 @@ $RECYCLE.BIN/
 _NCrunch*
 /.vs/DomainEvents/v16/Server/sqlite3
 /.vscode
+*.dtbcache
